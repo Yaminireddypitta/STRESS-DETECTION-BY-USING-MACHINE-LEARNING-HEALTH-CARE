@@ -8,9 +8,8 @@ from tkinter import filedialog
 import pandas as pd 
 import os
 from sklearn.feature_extraction.text import CountVectorizer
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-
+from keras.preprocessing.text import Tokenizer
+from keras.preprocessing.sequence import pad_sequences
 import re
 from sklearn.model_selection import train_test_split
 from nltk.corpus import stopwords
@@ -51,63 +50,50 @@ def preprocess():
     X = []
     Y = []
     textarea.delete('1.0', END)
-
-    try:
-        train = pd.read_csv(filename, encoding='iso-8859-1')
-    except Exception as e:
-        messagebox.showerror("Error", f"Failed to load dataset:\n{e}")
-        return
-
+    train = pd.read_csv(filename,encoding='iso-8859-1')
     word_count = 0
     words = []
-
     for i in range(len(train)):
-        try:
-            label = int(train.iloc[i, 2])   # Use iloc instead of get_value
-            tweet = str(train.iloc[i, 1]).lower()  # Convert to lowercase safely
-        except:
-            continue  # Skip rows that don’t have valid data
-
+        label = train.get_value(i,2,takeable = True)
+        tweet = train.get_value(i,1,takeable = True)
+        tweet = tweet.lower()
         arr = tweet.split(" ")
         msg = ''
-        for word in arr:
-            word = word.strip()
+        for k in range(len(arr)):
+            word = arr[k].strip()
             if len(word) > 2 and word not in stop_words:
-                msg += word + " "
+                msg+=word+" "
                 if word not in words:
-                    words.append(word)
-
+                    words.append(word);
         text = msg.strip()
-        if text:  # only append non-empty tweets
-            X.append(text)
-            Y.append(label)
-
+        X.append(text)
+        Y.append(int(label))
     X = np.asarray(X)
     Y = np.asarray(Y)
     word_count = len(words)
-
-    textarea.insert(END, f'Total tweets found in dataset : {len(X)}\n')
-    textarea.insert(END, f'Total words found in all tweets : {len(words)}\n\n')
-
+    textarea.insert(END,'Total tweets found in dataset : '+str(len(X))+"\n")
+    textarea.insert(END,'Total words found in all tweets : '+str(len(words))+"\n\n")
     featureExtraction()
 
 def featureExtraction():
-    global X, Y, XX, tokenizer, X_train, X_test, Y_train, Y_test
-    max_features = word_count
-    tokenizer = Tokenizer(num_words=max_features, split=' ')
+    global X
+    global Y
+    global XX
+    global tokenizer
+    global X_train, X_test, Y_train, Y_test
+    max_fatures = word_count
+    tokenizer = Tokenizer(num_words=max_fatures, split=' ')
     tokenizer.fit_on_texts(X)
     XX = tokenizer.texts_to_sequences(X)
     XX = pad_sequences(XX)
-
     indices = np.arange(XX.shape[0])
     np.random.shuffle(indices)
     XX = XX[indices]
     Y = Y[indices]
-    X_train, X_test, Y_train, Y_test = train_test_split(XX, Y, test_size=0.13, random_state=42)
-
-    textarea.insert(END, f'Total features extracted from tweets are  : {X_train.shape[1]}\n')
-    textarea.insert(END, f'Total records used for training : {len(X_train)}\n')
-    textarea.insert(END, f'Total records used for testing : {len(X_test)}\n\n')
+    X_train, X_test, Y_train, Y_test = train_test_split(XX,Y, test_size = 0.13, random_state = 42)
+    textarea.insert(END,'Total features extracted from tweets are  : '+str(X_train.shape[1])+"\n")
+    textarea.insert(END,'Total splitted records used for training : '+str(len(X_train))+"\n")
+    textarea.insert(END,'Total splitted records used for testing : '+str(len(X_test))+"\n") 
 
 def SVM():
     textarea.delete('1.0', END)
@@ -130,28 +116,29 @@ def RandomForest():
     textarea.insert(END,"Random Forest Accuracy : "+str(rf_acc)+"\n")
     model = rfc
 
-def predict():   # ✅ Make sure this is here BEFORE button creation
+def predict():
     textarea.delete('1.0', END)
-    testfile = filedialog.askopenfilename(initialdir="Tweets", title="Select Test File")
-    test = pd.read_csv(testfile, encoding='iso-8859-1')
+    testfile = filedialog.askopenfilename(initialdir = "Tweets")
+    test = pd.read_csv(testfile,encoding='iso-8859-1')
 
     for i in range(len(test)):
-        tweet = test.iloc[i, 0]
-        tweet = tweet.lower()
+        tweet = test.get_value(i,0,takeable = True)
         arr = tweet.split(" ")
         msg = ''
-        for word in arr:
+        for j in range(len(arr)):
+            word = arr[j].strip()
             if len(word) > 2 and word not in stop_words:
-                msg += word + " "
-        mytext = [msg.strip()]
+                msg+=word+" "
+        text = msg.strip()
+        mytext = [text]
         twts = tokenizer.texts_to_sequences(mytext)
         twts = pad_sequences(twts, maxlen=83, dtype='int32', value=0)
         stress = model.predict(twts)
+        print(stress)
         if stress == 0:
-            textarea.insert(END, mytext[0] + " === Prediction Result : Not Stressed\n\n")
-        else:
-            textarea.insert(END, mytext[0] + " === Prediction Result : Stressed\n\n")
-
+            textarea.insert(END,text+' === Prediction Result : Not Stressed\n\n')
+        if stress == 1:
+            textarea.insert(END,text+' === Prediction Result : Stressed\n\n')
         
 
 def graph():
@@ -192,7 +179,7 @@ rfButton.place(x=780,y=300)
 rfButton.config(font=font1)
 
 classifyButton = Button(main, text="Predict Stress", command=predict)
-classifyButton.place(x=780, y=350)
+classifyButton.place(x=780,y=350)
 classifyButton.config(font=font1)
 
 modelButton = Button(main, text="Accuracy Graph", command=graph)
