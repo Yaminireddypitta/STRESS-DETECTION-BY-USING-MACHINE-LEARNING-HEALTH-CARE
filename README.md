@@ -11,5 +11,7 @@ Business Problem:
 Employee stress has a direct impact on productivity, engagement, and overall organizational performance. In many workplaces, it is difficult for HR or management teams to identify stressed employees early, as manual monitoring is time-consuming and subjective. The challenge is to develop an automated solution that can analyze employees’ social media activity or text data to detect signs of stress accurately and in real time. By leveraging machine learning, organizations can proactively identify at-risk employees and implement timely wellness or support interventions to improve mental health and productivity.
 
 
+
+
 ![image_alt](https://github.com/Yaminireddypitta/STRESS-DETECTION-BY-USING-MACHINE-LEARNING-HEALTH-CARE/blob/61ca4c2667d2d9aabf914706f7f096bf223b3b5e/Screenshot%20(109).png)
 
