@@ -6,7 +6,7 @@ Using Python, NLTK, Scikit-learn, and Tkinter, I developed a machine learning ap
 
 Based on the analysis, I recommend applying this approach in workplace analytics to help organizations identify early signs of stress, improve mental health support, and enhance productivity.
 
-**Business Problem:**
+****Business Problem:****
 
 Employee stress has a direct impact on productivity, engagement, and overall organizational performance. In many workplaces, it is difficult for HR or management teams to identify stressed employees early, as manual monitoring is time-consuming and subjective. The challenge is to develop an automated solution that can analyze employees’ social media activity or text data to detect signs of stress accurately and in real time. By leveraging machine learning, organizations can proactively identify at-risk employees and implement timely wellness or support interventions to improve mental health and productivity.
 
