@@ -10,6 +10,22 @@ Business Problem:
 
 Employee stress has a direct impact on productivity, engagement, and overall organizational performance. In many workplaces, it is difficult for HR or management teams to identify stressed employees early, as manual monitoring is time-consuming and subjective. The challenge is to develop an automated solution that can analyze employees’ social media activity or text data to detect signs of stress accurately and in real time. By leveraging machine learning, organizations can proactively identify at-risk employees and implement timely wellness or support interventions to improve mental health and productivity.
 
+Methodology:
+
+Data Collection and Preprocessing:
+Gathered tweet data related to employee emotions and stress. Used Python (Pandas, NLTK) for cleaning, tokenizing, and removing stopwords to prepare the dataset for analysis.
+
+Feature Extraction and Model Training:
+Applied text vectorization techniques and trained machine learning models such as SVM and Random Forest to classify tweets into Stressed or Not Stressed categories.
+
+Performance Evaluation:
+Evaluated model accuracy and performance using metrics like precision and recall. Random Forest achieved around 97% accuracy, outperforming SVM.
+
+Visualization and Insights:
+Built a Power BI/Tableau dashboard to visualize overall stress trends, word frequency patterns, model accuracy comparisons, and daily stress distribution across tweets.
+
+Deployment via GUI:
+Developed an interactive Tkinter GUI allowing users to upload tweets and view instant stress detection predictions.
 
 
 
