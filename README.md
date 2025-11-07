@@ -1,6 +1,6 @@
 # EMPLOYEES STRESS-DETECTION-BY-USING-MACHINE-LEARNING   (HEALTH-CARE)
 
-Executive Summary:
+# EXECUTIVE SUMMARY:
 
 Using Python, NLTK, Scikit-learn, and Tkinter, I developed a machine learning application to detect employee stress levels from social media data. The system analyzes Twitter tweets and classifies them as Stressed or Not Stressed using Support Vector Machine (SVM) and Random Forest algorithms. After preprocessing text data and training both models, results showed that the Random Forest algorithm achieved an accuracy of 93%, outperforming SVM.
 
@@ -26,6 +26,8 @@ Built a Power BI/Tableau dashboard to visualize overall stress trends, word freq
 
 Deployment via GUI:
 Developed an interactive Tkinter GUI allowing users to upload tweets and view instant stress detection predictions.
+
+
 
 
 
