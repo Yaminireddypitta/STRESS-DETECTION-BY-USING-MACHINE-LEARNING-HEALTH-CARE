@@ -41,16 +41,12 @@ Tools: Tkinter for GUI, Visual Studio for analysis.
 
 # Results & Recommendations: 
 
-The machine learning models successfully classified tweets into Stressed and Not Stressed categories, with Random Forest achieving the highest accuracy of about 93%. To further improve the system, expanding the dataset with more diverse and recent tweets will strengthen model performance. Adding advanced NLP preprocessing methods such as lemmatization, bigram/trigram extraction, and emoji handling can help capture deeper stress patterns. Creating a dashboard to visualize stress trends, top keywords, and model accuracy will make insights easier for non-technical users. Adding clear explanations in the GUI for each prediction will also improve transparency and usefulness.
+The machine learning models successfully classified tweets into Stressed and Not Stressed categories, with Random Forest achieving the highest accuracy of about 93%. To further improve the system, expanding the dataset with more diverse and recent tweets will strengthen model performance. Creating a dashboard to visualize stress trends, top keywords, and model accuracy will make insights easier for non-technical users. Adding clear explanations in the GUI for each prediction will also improve transparency and usefulness.
 
 ![image_alt](https://github.com/Yaminireddypitta/STRESS-DETECTION-BY-USING-MACHINE-LEARNING-HEALTH-CARE/blob/61ca4c2667d2d9aabf914706f7f096bf223b3b5e/Screenshot%20(109).png)
 
 # Next Steps:
-
-Apply improved NLP preprocessing techniques and compare model results.
-Collect more labeled tweets to retrain the model and reduce misclassifications.
 Build a Power BI or Tableau dashboard to visualize stress patterns and trends.
-Add additional sentiment or emotion analysis to enhance the prediction accuracy.
 Deploy the model as an API or web app for real-time stress detection.
 
 
