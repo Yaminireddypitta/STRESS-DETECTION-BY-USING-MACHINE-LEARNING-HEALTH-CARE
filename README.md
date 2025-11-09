@@ -19,7 +19,7 @@ Feature Extraction and Model Training:
 Applied text vectorization techniques and trained machine learning models such as SVM and Random Forest to classify tweets into Stressed or Not Stressed categories.
 
 Performance Evaluation:
-Evaluated model accuracy and performance using metrics like precision and recall. Random Forest achieved around 97% accuracy, outperforming SVM.
+Evaluated model accuracy and performance using metrics like precision and recall. Random Forest achieved around 93% accuracy, outperforming SVM.
 
 Visualization and Insights:
 Built a Power BI/Tableau dashboard to visualize overall stress trends, word frequency patterns, model accuracy comparisons, and daily stress distribution across tweets.
@@ -37,7 +37,7 @@ Tools: Tkinter for GUI, Jupyter Notebook for analysis.
 
 # Results & Recommendations: 
 
-The machine learning models successfully classified tweets into Stressed and Not Stressed categories, with Random Forest achieving the highest accuracy of about 97%. To further improve the system, expanding the dataset with more diverse and recent tweets will strengthen model performance. Adding advanced NLP preprocessing methods such as lemmatization, bigram/trigram extraction, and emoji handling can help capture deeper stress patterns. Creating a dashboard to visualize stress trends, top keywords, and model accuracy will make insights easier for non-technical users. Adding clear explanations in the GUI for each prediction will also improve transparency and usefulness.
+The machine learning models successfully classified tweets into Stressed and Not Stressed categories, with Random Forest achieving the highest accuracy of about 93%. To further improve the system, expanding the dataset with more diverse and recent tweets will strengthen model performance. Adding advanced NLP preprocessing methods such as lemmatization, bigram/trigram extraction, and emoji handling can help capture deeper stress patterns. Creating a dashboard to visualize stress trends, top keywords, and model accuracy will make insights easier for non-technical users. Adding clear explanations in the GUI for each prediction will also improve transparency and usefulness.
 
 ![image_alt](https://github.com/Yaminireddypitta/STRESS-DETECTION-BY-USING-MACHINE-LEARNING-HEALTH-CARE/blob/61ca4c2667d2d9aabf914706f7f096bf223b3b5e/Screenshot%20(109).png)
 
