@@ -37,7 +37,7 @@ Data Processing: Cleaning text data, tokenization, stopword removal, feature eng
 
 Visualization: Creating accuracy graphs, preparing dashboard-ready insights.
 
-Tools: Tkinter for GUI, Jupyter Notebook for analysis.
+Tools: Tkinter for GUI, Visual Studio for analysis.
 
 # Results & Recommendations: 
 
