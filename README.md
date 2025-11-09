@@ -30,6 +30,7 @@ Developed an interactive Tkinter GUI allowing users to upload tweets and view in
 # Skills Used: 
 
 Python: Pandas, NumPy, Matplotlib, Scikit-learn, NLTK, text preprocessing, model training and evaluation, building prediction functions.
+
 Machine Learning: SVM, Random Forest, feature extraction, accuracy comparison.
 
 Data Processing: Cleaning text data, tokenization, stopword removal, feature engineering.
