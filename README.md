@@ -31,8 +31,11 @@ Developed an interactive Tkinter GUI allowing users to upload tweets and view in
 
 Python: Pandas, NumPy, Matplotlib, Scikit-learn, NLTK, text preprocessing, model training and evaluation, building prediction functions.
 Machine Learning: SVM, Random Forest, feature extraction, accuracy comparison.
+
 Data Processing: Cleaning text data, tokenization, stopword removal, feature engineering.
+
 Visualization: Creating accuracy graphs, preparing dashboard-ready insights.
+
 Tools: Tkinter for GUI, Jupyter Notebook for analysis.
 
 # Results & Recommendations: 
