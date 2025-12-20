@@ -45,9 +45,7 @@ The machine learning models successfully classified tweets into Stressed and Not
 
 ![image_alt](https://github.com/Yaminireddypitta/STRESS-DETECTION-BY-USING-MACHINE-LEARNING-HEALTH-CARE/blob/61ca4c2667d2d9aabf914706f7f096bf223b3b5e/Screenshot%20(109).png)
 
-# Next Steps:
-Build a Power BI or Tableau dashboard to visualize stress patterns and trends.
-Deploy the model as an API or web app for real-time stress detection.
+
 
 
 
